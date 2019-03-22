@@ -1,0 +1,179 @@
+<!DOCTYPE html><!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="/adoc-site-demo/stylesheets/styles.css"><script src="/adoc-site-demo/javascripts/vendor/custom.modernizr.js"></script><title>Automation Levels</title><link rel="icon" href="/adoc-site-demo/images/logo.png" sizes="32x32"><link rel="icon" href="/adoc-site-demo/images/logo.png" sizes="192x192"><link rel="author" href="/humans.txt"></head><body class="antialiased"><nav class="top-bar"><ul class="title-area"><li class="name"><a class="logo" href="https://mrduguo.github.io/adoc-site-demo/"><img src="/adoc-site-demo/images/logo.png" alt="Logo"></a> <a class='breadcrumb_anchor ' href='https://mrduguo.github.io/adoc-site-demo/kb/'
+        >Knowledge Base</a> <a class='breadcrumb_anchor ' href='https://mrduguo.github.io/adoc-site-demo/kb/engineering/'
+        >Engineering</a> <a class='breadcrumb_anchor ' href='https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/'
+        >Architecture</a></li><li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li></ul><section class="top-bar-section"><ul class="right"><li><input class="github-search" placeholder="Search..." id="gitsearch" onkeydown="if (event.keyCode == 13) window.location='https://github.com/mrduguo/adoc-site-demo/search?type=Code&q='+this.value"></li><li><a href="/adoc-site-demo/coming-soon/#/kb/research/">Research</a></li><li class="divider"></li><li><a href="/adoc-site-demo/kb/engineering/">Engineering</a></li><li class="divider"></li><li><a href="/adoc-site-demo/coming-soon/#/kb/product/">Product</a></li></ul></section></nav><div class="container"><header><div class="row"><div class="large-12 columns"><h1>Automation Levels</h1></div></div></header><div class="row"><div class="large-4 columns"><ul class="button-group toolbar" style="margin-bottom: -0.3333em"><li><a class="tiny secondary button toggle-navigation" href="#"><i class="fa fa-toggle-on"></i><i class="fa fa-toggle-off"></i> Nav</a></li><li><span class="separator"></span></li><li><a class="tiny secondary button" href="https://github.com/mrduguo/adoc-site-demo/edit/master/kb/engineering/architecture/automation-levels.adoc">Edit</a></li><li><a class="tiny secondary button" href="https://github.com/mrduguo/adoc-site-demo/blame/master/kb/engineering/architecture/automation-levels.adoc">Blame</a></li><li><a class="tiny secondary button" href="https://github.com/mrduguo/adoc-site-demo/commits/master/kb/engineering/architecture/automation-levels.adoc">History</a></li><li><a href="https://github.com/mrduguo/adoc-site-demo/blob/master/kb/engineering/architecture/automation-levels.adoc" title="Source"><i class="fa fa-github fa-fw"></i></a></li></ul></div></div><div class="row"><div class="large-4 columns secondary navigation"><div id="toc" class="toc"><div class="title" id="toctitle">Table of Contents</div><ul class="sectlevel1">
+<li><a href="#level-0-no-repeatable-documentation">Level 0: No Repeatable Documentation</a></li>
+<li><a href="#level-1-repeatable-operation-guide">Level 1: Repeatable Operation Guide</a></li>
+<li><a href="#level-2-repeatable-playbook">Level 2: Repeatable Playbook</a></li>
+<li><a href="#level-3-scripted-deployment">Level 3: Scripted Deployment</a></li>
+<li><a href="#level-4-continuous-integration">Level 4: Continuous Integration</a></li>
+<li><a href="#level-5-continuous-delivery">Level 5: Continuous Delivery</a></li>
+<li><a href="#level-6-continuous-deployment">Level 6: Continuous Deployment</a></li>
+<li><a href="#ci-cd-relationship">CI/CD Relationship</a></li>
+</ul></div></div><div class="large-8 columns content"><div id="content"><div id="preamble">
+<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+You’re either the one that creates the automation or you’re getting automated.
+</blockquote>
+<div class="attribution">
+&#8212; Tom Preston-Werner
+</div>
+</div>
+<div class="paragraph">
+<p>For each of operational task, we could get it done though different level of automation. Depends on the frequency and complicity of the task, we could take a balanced approach. We&#8217;d better invest in higher level of automation in frequent repeatable tasks. For lower frequent tasks, we could avoid fully automate the tasks to increase the reliability e.g. domain name registration, better to be in a repeatable operation guide.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/automation-leves.png" alt="automation leves" width="261" height="763">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="level-0-no-repeatable-documentation"><a class="anchor" href="#level-0-no-repeatable-documentation"></a>Level 0: No Repeatable Documentation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Basically no automation at all. We should avoid leave any task in this category.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="level-1-repeatable-operation-guide"><a class="anchor" href="#level-1-repeatable-operation-guide"></a>Level 1: Repeatable Operation Guide</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tasks with good documentation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Low frequency third party integration tasks</p>
+</li>
+<li>
+<p>Starting point for spike activities</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="level-2-repeatable-playbook"><a class="anchor" href="#level-2-repeatable-playbook"></a>Level 2: Repeatable Playbook</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tasks with <code>versioned</code> tools support:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Low frequent simple infrastructure activities</p>
+</li>
+<li>
+<p>Starting point for high frequent activities in a hurry</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="level-3-scripted-deployment"><a class="anchor" href="#level-3-scripted-deployment"></a>Level 3: Scripted Deployment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Complex multi steps tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>High frequent deployment activities</p>
+</li>
+<li>
+<p>With simple parameters</p>
+</li>
+<li>
+<p>Without code changes</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="level-4-continuous-integration"><a class="anchor" href="#level-4-continuous-integration"></a>Level 4: Continuous Integration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Deploy to <code>CI</code> environment via git commit trigger:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For related code base <code>master</code> branch</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="level-5-continuous-delivery"><a class="anchor" href="#level-5-continuous-delivery"></a>Level 5: Continuous Delivery</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Deploy to <code>PROD</code> environment via a manual approval/switch step.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For related release <code>release-vX.X.X</code> branch</p>
+</li>
+<li>
+<p>Deploy new release to <code>pre-production</code> instance</p>
+</li>
+<li>
+<p>Have automated validation on <code>pre-production</code> instance</p>
+</li>
+<li>
+<p>Have a <code>switch button</code> or similar mechanism for controlled release</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="level-6-continuous-deployment"><a class="anchor" href="#level-6-continuous-deployment"></a>Level 6: Continuous Deployment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Deploy to <code>PROD</code> environment via git commit trigger:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For related release <code>release-vX.X.X</code> branch</p>
+</li>
+<li>
+<p>Deploy new release to <code>pre-production</code> instance</p>
+</li>
+<li>
+<p>Have automated validation on <code>pre-production</code> instance</p>
+</li>
+<li>
+<p>Switch <code>live-production</code> to <code>pre-production</code></p>
+</li>
+<li>
+<p>Mark previous <code>live-production</code> as <code>post-production</code> for rollback purpose</p>
+</li>
+<li>
+<p>Tear down <code>post-production</code> after confirm everything is fine</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ci-cd-relationship"><a class="anchor" href="#ci-cd-relationship"></a>CI/CD Relationship</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../files/ci-cd.png" alt="CI/CD Relationship">
+</div>
+</div>
+<div class="paragraph">
+<p>Credit to <a href="https://medium.freecodecamp.org/how-to-set-up-continuous-deployment-in-your-home-project-the-easy-way-41b84a467eed">freeCodeCamp.org</a></p>
+</div>
+</div>
+</div></div></div></div></div><script>document.write('<script src=' + ('__proto__' in {} ? '/adoc-site-demo/javascripts/vendor/zepto' : '/adoc-site-demo/javascripts/vendor/jquery') + '.js><\/script>')</script><script>$('.toggle-navigation').click(function() { $('.navigation').toggle(); $('.content').toggleClass('large-8'); $('.content').toggleClass('large-12'); $('.toolbar').toggleClass('off'); });</script><script src="/adoc-site-demo/javascripts/foundation/foundation.js"></script><script src="/adoc-site-demo/javascripts/foundation/foundation.topbar.js"></script><script>$(document).foundation();</script></body></html>

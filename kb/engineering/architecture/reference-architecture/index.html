@@ -1,0 +1,113 @@
+<!DOCTYPE html><!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="/adoc-site-demo/stylesheets/styles.css"><script src="/adoc-site-demo/javascripts/vendor/custom.modernizr.js"></script><title>Reference Architecture&#58; Event Processing</title><link rel="icon" href="/adoc-site-demo/images/logo.png" sizes="32x32"><link rel="icon" href="/adoc-site-demo/images/logo.png" sizes="192x192"><link rel="author" href="/humans.txt"></head><body class="antialiased"><nav class="top-bar"><ul class="title-area"><li class="name"><a class="logo" href="https://mrduguo.github.io/adoc-site-demo/"><img src="/adoc-site-demo/images/logo.png" alt="Logo"></a> <a class='breadcrumb_anchor ' href='https://mrduguo.github.io/adoc-site-demo/kb/'
+        >Knowledge Base</a> <a class='breadcrumb_anchor ' href='https://mrduguo.github.io/adoc-site-demo/kb/engineering/'
+        >Engineering</a> <a class='breadcrumb_anchor ' href='https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/'
+        >Architecture</a></li><li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li></ul><section class="top-bar-section"><ul class="right"><li><input class="github-search" placeholder="Search..." id="gitsearch" onkeydown="if (event.keyCode == 13) window.location='https://github.com/mrduguo/adoc-site-demo/search?type=Code&q='+this.value"></li><li><a href="/adoc-site-demo/coming-soon/#/kb/research/">Research</a></li><li class="divider"></li><li><a href="/adoc-site-demo/kb/engineering/">Engineering</a></li><li class="divider"></li><li><a href="/adoc-site-demo/coming-soon/#/kb/product/">Product</a></li></ul></section></nav><div class="container"><header><div class="row"><div class="large-12 columns"><h1>Reference Architecture&#58; Event Processing</h1></div></div></header><div class="row"><div class="large-4 columns"><ul class="button-group toolbar" style="margin-bottom: -0.3333em"><li><a class="tiny secondary button toggle-navigation" href="#"><i class="fa fa-toggle-on"></i><i class="fa fa-toggle-off"></i> Nav</a></li><li><span class="separator"></span></li><li><a class="tiny secondary button" href="https://github.com/mrduguo/adoc-site-demo/edit/master/kb/engineering/architecture/reference-architecture.adoc">Edit</a></li><li><a class="tiny secondary button" href="https://github.com/mrduguo/adoc-site-demo/blame/master/kb/engineering/architecture/reference-architecture.adoc">Blame</a></li><li><a class="tiny secondary button" href="https://github.com/mrduguo/adoc-site-demo/commits/master/kb/engineering/architecture/reference-architecture.adoc">History</a></li><li><a href="https://github.com/mrduguo/adoc-site-demo/blob/master/kb/engineering/architecture/reference-architecture.adoc" title="Source"><i class="fa fa-github fa-fw"></i></a></li></ul></div></div><div class="row"><div class="large-4 columns secondary navigation"><div id="toc" class="toc"><div class="title" id="toctitle">Table of Contents</div><ul class="sectlevel1">
+<li><a href="#realtime-processing">Realtime Processing</a></li>
+<li><a href="#use-case-batch-re-processing">Use Case: Batch Re-Processing</a></li>
+<li><a href="#use-case-pipeline-replication">Use Case: Pipeline Replication</a></li>
+<li><a href="#uptime-sla-table">Uptime SLA Table</a></li>
+</ul></div></div><div class="large-8 columns content"><div id="content"><div id="preamble">
+<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+A reference architecture is a document or set of documents to which a project manager or other interested party can refer for best practices.
+</blockquote>
+<div class="attribution">
+&#8212; Wikipedia
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="realtime-processing"><a class="anchor" href="#realtime-processing"></a>Realtime Processing</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../files/reference-architecture-realtime.png" alt="Realtime Processing">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-case-batch-re-processing"><a class="anchor" href="#use-case-batch-re-processing"></a>Use Case: Batch Re-Processing</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../files/reference-architecture-batch.png" alt="Batch Processing">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-case-pipeline-replication"><a class="anchor" href="#use-case-pipeline-replication"></a>Use Case: Pipeline Replication</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../files/reference-architecture-replica.png" alt="Pipeline Replication">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="uptime-sla-table"><a class="anchor" href="#uptime-sla-table"></a>Uptime SLA Table</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://en.wikipedia.org/wiki/High_availability#Percentage_calculation">SLA level of uptime/availability</a> results in the following periods of potential downtime/unavailability:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Availability %</th>
+<th class="tableblock halign-left valign-top">Downtime / Day</th>
+<th class="tableblock halign-left valign-top">Downtime / Week</th>
+<th class="tableblock halign-left valign-top">Downtime / Month</th>
+<th class="tableblock halign-left valign-top">Downtime / Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90% ("one nine")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.40 h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16.80 h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">73.05 h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">36.53 d</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">99% ("two nines")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.40 m</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.68 h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.31 h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.65 d</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">99.9% ("three nines")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.44 m</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10.08 m</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">43.83 m</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8.77 h</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">99.99% ("four nines")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8.64 s</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.01 m</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.38 m</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">52.60 m</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">99.999% ("five nines")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">864.00 ms</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.05 s</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.30 s</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.26 m</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div></div></div></div><script>document.write('<script src=' + ('__proto__' in {} ? '/adoc-site-demo/javascripts/vendor/zepto' : '/adoc-site-demo/javascripts/vendor/jquery') + '.js><\/script>')</script><script>$('.toggle-navigation').click(function() { $('.navigation').toggle(); $('.content').toggleClass('large-8'); $('.content').toggleClass('large-12'); $('.toolbar').toggleClass('off'); });</script><script src="/adoc-site-demo/javascripts/foundation/foundation.js"></script><script src="/adoc-site-demo/javascripts/foundation/foundation.topbar.js"></script><script>$(document).foundation();</script></body></html>

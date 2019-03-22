@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="/adoc-site-demo/stylesheets/styles.css"><script src="/adoc-site-demo/javascripts/vendor/custom.modernizr.js"></script><title>Secure Network</title><link rel="icon" href="/adoc-site-demo/images/logo.png" sizes="32x32"><link rel="icon" href="/adoc-site-demo/images/logo.png" sizes="192x192"><link rel="author" href="/humans.txt"></head><body class="antialiased"><nav class="top-bar"><ul class="title-area"><li class="name"><a class="logo" href="https://mrduguo.github.io/adoc-site-demo/"><img src="/adoc-site-demo/images/logo.png" alt="Logo"></a> <a class='breadcrumb_anchor ' href='https://mrduguo.github.io/adoc-site-demo/kb/'
+        >Knowledge Base</a> <a class='breadcrumb_anchor ' href='https://mrduguo.github.io/adoc-site-demo/kb/engineering/'
+        >Engineering</a> <a class='breadcrumb_anchor ' href='https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/'
+        >Architecture</a></li><li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li></ul><section class="top-bar-section"><ul class="right"><li><input class="github-search" placeholder="Search..." id="gitsearch" onkeydown="if (event.keyCode == 13) window.location='https://github.com/mrduguo/adoc-site-demo/search?type=Code&q='+this.value"></li><li><a href="/adoc-site-demo/coming-soon/#/kb/research/">Research</a></li><li class="divider"></li><li><a href="/adoc-site-demo/kb/engineering/">Engineering</a></li><li class="divider"></li><li><a href="/adoc-site-demo/coming-soon/#/kb/product/">Product</a></li></ul></section></nav><div class="container"><header><div class="row"><div class="large-12 columns"><h1>Secure Network</h1></div></div></header><div class="row"><div class="large-4 columns"><ul class="button-group toolbar" style="margin-bottom: -0.3333em"><li><a class="tiny secondary button toggle-navigation" href="#"><i class="fa fa-toggle-on"></i><i class="fa fa-toggle-off"></i> Nav</a></li><li><span class="separator"></span></li><li><a class="tiny secondary button" href="https://github.com/mrduguo/adoc-site-demo/edit/master/kb/engineering/architecture/secure-network.adoc">Edit</a></li><li><a class="tiny secondary button" href="https://github.com/mrduguo/adoc-site-demo/blame/master/kb/engineering/architecture/secure-network.adoc">Blame</a></li><li><a class="tiny secondary button" href="https://github.com/mrduguo/adoc-site-demo/commits/master/kb/engineering/architecture/secure-network.adoc">History</a></li><li><a href="https://github.com/mrduguo/adoc-site-demo/blob/master/kb/engineering/architecture/secure-network.adoc" title="Source"><i class="fa fa-github fa-fw"></i></a></li></ul></div></div><div class="row"><div class="large-4 columns secondary navigation"><div id="toc" class="toc"><div class="title" id="toctitle">Table of Contents</div><ul class="sectlevel1">
+<li><a href="#policy">Policy</a></li>
+<li><a href="#network-topology">Network Topology</a></li>
+<li><a href="#environments-topology">Environments Topology</a></li>
+</ul></div></div><div class="large-8 columns content"><div id="content"><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>It used to be expensive and complicated to build secure network. Also a secure network means difficult to use. But it&#8217;s not the case any more with easy to use cloud based technologies.</p>
+</div>
+<div class="paragraph">
+<p>The secure network design put our infrastructure in a safe and isolated environment but still give teams the flexibility to work from anywhere.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="policy"><a class="anchor" href="#policy"></a>Policy</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>No server exposed to Internet directly</p>
+</li>
+<li>
+<p>Public access to service only via secure HTTPS to Load Balancer</p>
+</li>
+<li>
+<p>Private access to servers only allowed from <a href="https://en.wikipedia.org/wiki/Jump_server">JUMP</a> server</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>User can tunnel to other internal server via SSH</p>
+</li>
+<li>
+<p>Access to JUMP server only allowed from White Listed IPs</p>
+</li>
+<li>
+<p>User can easily temporary white list their IP with Google Account for Work From Home case</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="network-topology"><a class="anchor" href="#network-topology"></a>Network Topology</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="/images/network-topology.png" alt="network topology" width="451" height="652">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="environments-topology"><a class="anchor" href="#environments-topology"></a>Environments Topology</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="/images/env-topology.png" alt="env topology" width="744" height="452">
+</div>
+</div>
+</div>
+</div></div></div></div></div><script>document.write('<script src=' + ('__proto__' in {} ? '/adoc-site-demo/javascripts/vendor/zepto' : '/adoc-site-demo/javascripts/vendor/jquery') + '.js><\/script>')</script><script>$('.toggle-navigation').click(function() { $('.navigation').toggle(); $('.content').toggleClass('large-8'); $('.content').toggleClass('large-12'); $('.toolbar').toggleClass('off'); });</script><script src="/adoc-site-demo/javascripts/foundation/foundation.js"></script><script src="/adoc-site-demo/javascripts/foundation/foundation.topbar.js"></script><script>$(document).foundation();</script></body></html>
