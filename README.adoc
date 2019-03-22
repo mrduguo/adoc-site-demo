@@ -1,0 +1,22 @@
+= adoc-site-demo image:https://secure.travis-ci.org/mrduguo/adoc-site-demo.svg?branch=master["Build Status", link="https://travis-ci.org/mrduguo/adoc-site-demo"]
+
+A sample document site using https://hub.docker.com/r/mrduguo/adoc-site-builder docker image.
+
+
+== Features
+This site demo a few feature of the documentation system:
+
+* https://mrduguo.github.io/adoc-site-demo/[Breadcrumb based navigation]
+* https://mrduguo.github.io/adoc-site-demo/[Search box]
+* https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/secure-network/#network-topology[Diagrams support]
+*  https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/reference-architecture/#realtime-processing[Files support]
+
+== Preview Site Locally
+  docker run -it --name adoc-site-builder --rm -v $(pwd):/workspace/_override -p 4242:4242 mrduguo/adoc-site-builder bundle exec rake preview
+
+Then you can preview at http://localhost:4242/[]
+
+=== Build Site
+  docker run -it --name adoc-site-builder --rm -v $(pwd):/workspace/_override -v $(pwd)/_site:/workspace/_site mrduguo/adoc-site-builder
+
+Then you can find the site been generated at `_site` folder.
