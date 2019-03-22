@@ -26,7 +26,8 @@ asciidoctor:
     idseparator: '-'
     icons: 'font'
     sectanchors: ''
-    imagesoutdir: '/workspace/_site/images'
+    imagesdir: '/images/diagrams'
+    imagesoutdir: '/workspace/_site/images/diagrams'
     outdir: '/workspace/_tmp'
     linkattrs: ''
     #source-highlighter: 'highlight.js'
@@ -41,5 +42,4 @@ profiles:
   development:
     #show_drafts: false
   production:
-    base_url: https://mrduguo.github.io/adoc-site-demo
-    context_path: '/adoc-site-demo'
+    context_path: /adoc-site-demo

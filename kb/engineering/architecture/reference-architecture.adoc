@@ -9,11 +9,15 @@ A reference architecture is a document or set of documents to which a project ma
 
 image::files/reference-architecture-realtime.png[Realtime Processing]
 
-== Use Case: Batch Re-Processing
+== Use Cases
+
+The processing work flow could be rewired to support different development scenarios.
+
+=== Batch Re-Processing
 
 image::files/reference-architecture-batch.png[Batch Processing]
 
-== Use Case: Pipeline Replication
+=== Pipeline Replication
 
 image::files/reference-architecture-replica.png[Pipeline Replication]
 
