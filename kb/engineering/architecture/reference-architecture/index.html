@@ -1,10 +1,14 @@
-<!DOCTYPE html><!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="/adoc-site-demo/stylesheets/styles.css"><script src="/adoc-site-demo/javascripts/vendor/custom.modernizr.js"></script><title>Reference Architecture&#58; Event Processing</title><link rel="icon" href="/adoc-site-demo/images/logo.png" sizes="32x32"><link rel="icon" href="/adoc-site-demo/images/logo.png" sizes="192x192"><link rel="author" href="/humans.txt"></head><body class="antialiased"><nav class="top-bar"><ul class="title-area"><li class="name"><a class="logo" href="https://mrduguo.github.io/adoc-site-demo/"><img src="/adoc-site-demo/images/logo.png" alt="Logo"></a> <a class='breadcrumb_anchor ' href='https://mrduguo.github.io/adoc-site-demo/kb/'
-        >Knowledge Base</a> <a class='breadcrumb_anchor ' href='https://mrduguo.github.io/adoc-site-demo/kb/engineering/'
-        >Engineering</a> <a class='breadcrumb_anchor ' href='https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/'
+<!DOCTYPE html><!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="/adoc-site-demo/stylesheets/styles.css"><script src="/adoc-site-demo/javascripts/vendor/custom.modernizr.js"></script><title>Reference Architecture&#58; Event Processing</title><link rel="icon" href="/adoc-site-demo/images/logo.png" sizes="32x32"><link rel="icon" href="/adoc-site-demo/images/logo.png" sizes="192x192"><link rel="author" href="/humans.txt"></head><body class="antialiased"><nav class="top-bar"><ul class="title-area"><li class="name"><a class="logo" href="/adoc-site-demo/"><img src="/adoc-site-demo/images/logo.png" alt="Logo"></a> <a class='breadcrumb_anchor ' href='/adoc-site-demo/kb/'
+        >Knowledge Base</a> <a class='breadcrumb_anchor ' href='/adoc-site-demo/kb/engineering/'
+        >Engineering</a> <a class='breadcrumb_anchor ' href='/adoc-site-demo/kb/engineering/architecture/'
         >Architecture</a></li><li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li></ul><section class="top-bar-section"><ul class="right"><li><input class="github-search" placeholder="Search..." id="gitsearch" onkeydown="if (event.keyCode == 13) window.location='https://github.com/mrduguo/adoc-site-demo/search?type=Code&q='+this.value"></li><li><a href="/adoc-site-demo/coming-soon/#/kb/research/">Research</a></li><li class="divider"></li><li><a href="/adoc-site-demo/kb/engineering/">Engineering</a></li><li class="divider"></li><li><a href="/adoc-site-demo/coming-soon/#/kb/product/">Product</a></li></ul></section></nav><div class="container"><header><div class="row"><div class="large-12 columns"><h1>Reference Architecture&#58; Event Processing</h1></div></div></header><div class="row"><div class="large-4 columns"><ul class="button-group toolbar" style="margin-bottom: -0.3333em"><li><a class="tiny secondary button toggle-navigation" href="#"><i class="fa fa-toggle-on"></i><i class="fa fa-toggle-off"></i> Nav</a></li><li><span class="separator"></span></li><li><a class="tiny secondary button" href="https://github.com/mrduguo/adoc-site-demo/edit/master/kb/engineering/architecture/reference-architecture.adoc">Edit</a></li><li><a class="tiny secondary button" href="https://github.com/mrduguo/adoc-site-demo/blame/master/kb/engineering/architecture/reference-architecture.adoc">Blame</a></li><li><a class="tiny secondary button" href="https://github.com/mrduguo/adoc-site-demo/commits/master/kb/engineering/architecture/reference-architecture.adoc">History</a></li><li><a href="https://github.com/mrduguo/adoc-site-demo/blob/master/kb/engineering/architecture/reference-architecture.adoc" title="Source"><i class="fa fa-github fa-fw"></i></a></li></ul></div></div><div class="row"><div class="large-4 columns secondary navigation"><div id="toc" class="toc"><div class="title" id="toctitle">Table of Contents</div><ul class="sectlevel1">
 <li><a href="#realtime-processing">Realtime Processing</a></li>
-<li><a href="#use-case-batch-re-processing">Use Case: Batch Re-Processing</a></li>
-<li><a href="#use-case-pipeline-replication">Use Case: Pipeline Replication</a></li>
+<li><a href="#use-cases">Use Cases</a>
+<ul class="sectlevel2">
+<li><a href="#batch-re-processing">Batch Re-Processing</a></li>
+<li><a href="#pipeline-replication">Pipeline Replication</a></li>
+</ul>
+</li>
 <li><a href="#uptime-sla-table">Uptime SLA Table</a></li>
 </ul></div></div><div class="large-8 columns content"><div id="content"><div id="preamble">
 <div class="sectionbody">
@@ -29,21 +33,25 @@ A reference architecture is a document or set of documents to which a project ma
 </div>
 </div>
 <div class="sect1">
-<h2 id="use-case-batch-re-processing"><a class="anchor" href="#use-case-batch-re-processing"></a>Use Case: Batch Re-Processing</h2>
+<h2 id="use-cases"><a class="anchor" href="#use-cases"></a>Use Cases</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The processing work flow could be rewired to support different development scenarios.</p>
+</div>
+<div class="sect2">
+<h3 id="batch-re-processing"><a class="anchor" href="#batch-re-processing"></a>Batch Re-Processing</h3>
 <div class="imageblock">
 <div class="content">
 <img src="../files/reference-architecture-batch.png" alt="Batch Processing">
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="use-case-pipeline-replication"><a class="anchor" href="#use-case-pipeline-replication"></a>Use Case: Pipeline Replication</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="pipeline-replication"><a class="anchor" href="#pipeline-replication"></a>Pipeline Replication</h3>
 <div class="imageblock">
 <div class="content">
 <img src="../files/reference-architecture-replica.png" alt="Pipeline Replication">
+</div>
 </div>
 </div>
 </div>
