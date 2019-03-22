@@ -4,7 +4,7 @@ A sample document site using https://hub.docker.com/r/mrduguo/adoc-site-builder 
 
 
 == Features
-This site demo a few feature of the documentation system:
+This site demo a few features of the documentation system:
 
 * https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/reference-architecture/[demo page 1]
 ** breadcrumb based navigation
