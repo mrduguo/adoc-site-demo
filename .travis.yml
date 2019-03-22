@@ -1,0 +1,16 @@
+sudo: true
+language: java
+git:
+  depth: 1
+services:
+- docker
+env:
+  global:
+    secure: BG1xQbAcgGPSA5h3xsS0NdiERvOdfbydWj4gFdw5xqQu6X8wjZ8ZGTFjvlnN4o76sKIeqWCGoyIBkuKjWrL5PTsarW00bz0OzChTyO8pzSb5K2uy8jLy37Wp+a/lDDLcER1JJmMYEeLuv/sglY2I4lp6hxVkGqT6IKDOKFULB4mbwOfCYfliNUTItKc1crkWiixbsirGf58qgA7Nx7v8vWD3Izn6oVt3uFbW8Ix4EHxMs0DsADx1YezCmCuT4rWvQnKncoHVqQ3ijyNBLI74HGpXp6cwMuxiz0yusLcQzdZe1tubc/lLuqhtVvVWMD79lVZkk/8dLPQZhxSV1FPBmNF1EHpCi3Yhedzisw/kKmeTHzScHRlseJi3zBJJucvkGhS94+Ww4YeQUoE7gFhyl6G7K+MQCmM26fnKZztX+FAX+zryN6FsoNpmzplWenF4maww1EZ/vw7CzzHnNJWnDWPPpXmY3widm8x9LYaWlSj88JsjHD/sTXPLPH7X95HsiFJPt3x+0LQnpFFOYyUKARjPvo6MH+gGIK7XNBt+lxwg269yfxWXED487+5JAVLo+hf3/7W1TeVQ0V9AzCsmiiN9OztpwtwpR2eVGxVpTufFjumJR8YAFm+S/SiyNdG6+3RZTE7iHs1ZpMEXma7+j08+CylYZywXJIcE1/1dzcM=
+script: docker run -v $(pwd):/workspace/_override -v $(pwd)/_site:/workspace/_site mrduguo/adoc-site-builder
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_T
+  keep-history: true
+  local-dir: _site

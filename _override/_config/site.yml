@@ -1,0 +1,45 @@
+title: Asciidoctor
+description: An open source implementation of AsciiDoc in Ruby
+author: Asciidoctor Project
+git_url: 'https://github.com/mrduguo/adoc-site-demo'
+homepage:
+  list:
+    name: Knowledge Base
+    path: /kb/
+
+context_path: ''
+local_tz: Europe/Dublin
+disqus: asciidoctor
+disqus_generate_id: true
+disqus_developer: true
+asciidoctor:
+  :safe: :unsafe
+  :base_dir: null
+  :attributes:
+    allow-uri-read: ''
+    #cache-uri: ''
+    compat-mode: '@'
+    attribute-missing: 'warn'
+    relfileprefix: '../'
+    outfilesuffix: '/'
+    idprefix: ''
+    idseparator: '-'
+    icons: 'font'
+    sectanchors: ''
+    imagesoutdir: '/workspace/_site/images'
+    outdir: '/workspace/_tmp'
+    linkattrs: ''
+    #source-highlighter: 'highlight.js'
+    source-highlighter: 'coderay'
+    prewrap: null
+haml:
+  :ugly: true
+slim|html:
+  :format: :html
+# NOTE if no profile is specified, the first with a deploy config is selected
+profiles:
+  development:
+    #show_drafts: false
+  production:
+    base_url: https://mrduguo.github.io/adoc-site-demo
+    context_path: '/adoc-site-demo'

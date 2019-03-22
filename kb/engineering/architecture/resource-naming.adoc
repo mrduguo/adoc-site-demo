@@ -1,0 +1,21 @@
+:page-order: 21
+
+
+= Resource Naming
+
+[quote, Phil Karlton]
+There are only two hard things in Computer Science: cache invalidation and naming things.
+
+
+Consistent naming resources is critical in our daily work for collaboration and automation. This document is to help naming  our global wide resources.
+
+
+== Complete Name
+
+> `tld`.`example`.[`vendor`].[`env`].[`deployment`].`product`.[`component`].[`version`].[`sequence`]
+
+The naming convention:
+
+1. has simple rule: scope of the resource get smaller from left to right.
+2. each naming section only allow `^[a-z][a-z0-9]+$` start with letter and only contains lower case letter or number
+3. generate resource name based on the convention

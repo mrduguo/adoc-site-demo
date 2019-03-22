@@ -1,0 +1,8 @@
+:page-layout: homepage
+
+= ADoc Site Demo
+
+
+== Just a start
+
+Your stage to show craftsmanship ...

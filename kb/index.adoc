@@ -1,0 +1,18 @@
+:page-layout: index
+
+= Knowledge Base
+
+A place we keep our knowledge with https://en.wikipedia.org/wiki/Information_architecture[Information Architecture] in mind. Once you made the change and committed to the link:https://github.com/mrduguo/adoc-site-demo[git repo], the site will be updated *automatically* in a few minutes.
+
+The Knowledge Base use lightweight markup language https://asciidoctor.org/docs/what-is-asciidoc/[AsciiDoc]. It offer a plain-text syntax, embellished with subtle, yet intuitive markup, that’s designed for humans to read, write and edit in raw form. We have build-in support for text based diagram http://plantuml.com/[PlantUML].
+
+== Pages
+
+page_list_macro::/kb/[includeChild=true]
+
+
+== Reference Links
+
+* https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc Syntax Quick Reference]
+* http://plantuml.com/[PlantUML Reference]
+* https://www.planttext.com/[PlantUML Online Editor]

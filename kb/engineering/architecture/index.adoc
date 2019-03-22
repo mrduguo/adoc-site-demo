@@ -1,0 +1,5 @@
+:page-layout: index
+
+= Architecture
+
+page_list_macro::/kb/engineering/architecture/[]

@@ -1,0 +1,119 @@
+:page-order: 31
+
+= Secure Network
+
+It used to be expensive and complicated to build secure network. Also a secure network means difficult to use. But it's not the case any more with easy to use cloud based technologies.
+
+The secure network design put our infrastructure in a safe and isolated environment but still give teams the flexibility to work from anywhere.
+
+== Policy
+
+1. No server exposed to Internet directly
+2. Public access to service only via secure HTTPS to Load Balancer
+3. Private access to servers only allowed from https://en.wikipedia.org/wiki/Jump_server[JUMP] server
+ a. User can tunnel to other internal server via SSH
+ b. Access to JUMP server only allowed from White Listed IPs
+ c. User can easily temporary white list their IP with Google Account for Work From Home case
+
+
+== Network Topology
+
+
+[plantuml, network-topology]
+----
+
+cloud "Internet" <<public>> as PUBLIC{
+    rectangle "Public Client" <<public>> as CLIENT
+    node "White Listed IPs" as WHITELIST {
+        rectangle "Home" <<secure>> as HOME
+        rectangle "Office" <<secure>> as OFFICE
+    }
+}
+interface "HTTPS" as HTTPS
+interface "SSH/HTTPS" as SECURE
+cloud "Production" <<private>> as PROD{
+    rectangle "Load Balancer" <<public>> as LB
+    frame "prod-infra" <<internal>> as PRODINFRA {
+        component "jump.example.com" <<secure>> as JUMP
+    }
+    frame "prod-core" <<internal>> as PRODCORE
+    frame "prod-paris" <<internal>> as PRODPRS
+    frame "prod-ny" <<internal>> as PRODNY
+}
+
+OFFICE --> SECURE
+HOME --> SECURE
+
+SECURE --> JUMP
+PRODINFRA --> PRODCORE
+PRODINFRA --> PRODPRS
+PRODINFRA --> PRODNY
+
+CLIENT --> HTTPS
+HTTPS --> LB
+LB --> PRODINFRA
+LB --> PRODCORE
+LB --> PRODPRS
+LB --> PRODNY
+
+
+
+skinparam frame {
+  BackgroundColor<<internal>> Gray
+}
+
+skinparam component {
+  BackgroundColor<<secure>> Orange
+}
+skinparam rectangle {
+  BackgroundColor<<secure>> Orange
+}
+
+----
+
+== Environments Topology
+
+
+[plantuml, env-topology]
+----
+
+cloud "Internet" <<public>> as PUBLIC{
+    rectangle "Public Client" <<public>> as CLIENT
+    node "White Listed IPs" as WHITELIST {
+        rectangle "Home" <<secure>> as HOME
+        rectangle "Office" <<secure>> as OFFICE
+    }
+}
+interface "HTTPS" as HTTPS
+interface "SSH/HTTPS" as SECURE
+cloud "Production" <<private>> as PROD{
+ rectangle "Load Balancer" <<public>> as LB
+ component "jump.example.com" <<secure>> as JUMP
+}
+cloud "Development" <<private>> as DEV{
+ rectangle "Load Balancer" <<public>> as STAGINGLB
+ component "staging-jump.example.net" <<secure>> as STAGINGJUMP
+}
+
+OFFICE --> SECURE
+HOME --> SECURE
+
+SECURE --> JUMP
+SECURE --> STAGINGJUMP
+CLIENT --> HTTPS
+HTTPS --> LB
+HTTPS --> STAGINGLB
+
+
+skinparam frame {
+  BackgroundColor<<internal>> Gray
+}
+
+skinparam component {
+  BackgroundColor<<secure>> Orange
+}
+skinparam rectangle {
+  BackgroundColor<<secure>> Orange
+}
+
+----
