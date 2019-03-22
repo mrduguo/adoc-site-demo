@@ -6,11 +6,12 @@ services:
 - docker
 env:
   global:
-    secure: BG1xQbAcgGPSA5h3xsS0NdiERvOdfbydWj4gFdw5xqQu6X8wjZ8ZGTFjvlnN4o76sKIeqWCGoyIBkuKjWrL5PTsarW00bz0OzChTyO8pzSb5K2uy8jLy37Wp+a/lDDLcER1JJmMYEeLuv/sglY2I4lp6hxVkGqT6IKDOKFULB4mbwOfCYfliNUTItKc1crkWiixbsirGf58qgA7Nx7v8vWD3Izn6oVt3uFbW8Ix4EHxMs0DsADx1YezCmCuT4rWvQnKncoHVqQ3ijyNBLI74HGpXp6cwMuxiz0yusLcQzdZe1tubc/lLuqhtVvVWMD79lVZkk/8dLPQZhxSV1FPBmNF1EHpCi3Yhedzisw/kKmeTHzScHRlseJi3zBJJucvkGhS94+Ww4YeQUoE7gFhyl6G7K+MQCmM26fnKZztX+FAX+zryN6FsoNpmzplWenF4maww1EZ/vw7CzzHnNJWnDWPPpXmY3widm8x9LYaWlSj88JsjHD/sTXPLPH7X95HsiFJPt3x+0LQnpFFOYyUKARjPvo6MH+gGIK7XNBt+lxwg269yfxWXED487+5JAVLo+hf3/7W1TeVQ0V9AzCsmiiN9OztpwtwpR2eVGxVpTufFjumJR8YAFm+S/SiyNdG6+3RZTE7iHs1ZpMEXma7+j08+CylYZywXJIcE1/1dzcM=
-script: docker run -v $(pwd):/workspace/_override -v $(pwd)/_site:/workspace/_site mrduguo/adoc-site-builder
+    secure: SesDrneGcplyl9AIrnLt8ZB86lQAIgujV+LNo4FiTNkTxM9paIfObmYdBimEToXAyydRRYZQaBpEEeebB6B4sJN2YQK50HT8WS3jBbD5CRmWy7a2YMF24AWxHm8aXOm2EQtBalf3IwvMuDTGh3fjeU9ZWuM8JIit05eKikNNEBu8hsIipVudguwR1nlmEGdaVmiP9b8mQrbPQevFd5HrRc2I0U4CcStxd6ABn2u34qv/BACmQkZYv9ffaOEyo4LEaCm8jW3VdrofMXENl/iU4hpnVtKZsk+ifpV6K8JyIYkGcEnXeQvTbpJyA7c0YIBi3nWJH3kwMgta1AcaoZNtP3oh2AerATfVv3Or1cfXLlxMR08+hGE+fZFwazuVtE40FgkM/O2H3CBT6oqCqmPkG9462D2D4SpQvYNrvz9QW0vlwaQCQ256uKUbjHsQRFkfuSZjTAyERaWJYJ4uLZm1jqqt2Ex+CQdY0XXXV2C4MXcDBFxRII1be/IOjzQxOmLNQdfBI1FX0joW6WfcLPG3xfezdGuUmgZAKejHhEQLCsEpUrRm4YZVSKaFtMeb3tN2bQQhjvPXMfwhssEA2yLUspg9Srd/mMHcmo4yuz1ghxDs1KgWhLB7teiNPXKgOWGJqD5cTrXnugDFkdUbzLmpRYO/GMnlqd5kxRUuUpjI438=
+script: docker run -v $(pwd):/workspace/_override -v $(pwd)/_site:/workspace/_site
+  mrduguo/adoc-site-builder
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GH_T
+  github-token: "$GH_T"
   keep-history: true
   local-dir: _site
