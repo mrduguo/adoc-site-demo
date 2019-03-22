@@ -2,22 +2,4 @@
 
 = ADoc Site Demo
 
-== Features
-This site demo a few features of the documentation system:
-
-
-* https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/reference-architecture/[demo page 1]
-** breadcrumb based navigation
-** search box
-** table of content
-** git repo links integration
-** files support
-* https://mrduguo.github.io/adoc-site-demo/kb/[demo page 2]: site map
-* https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/secure-network/#network-topology[demo page 3]: diagrams support
-
-
-
-== Source Code
-
-The site was generated from https://github.com/mrduguo/adoc-site-demo . Feel free to take a look how it works with reliable docker based documentation generation.
-
+include::README.adoc[]

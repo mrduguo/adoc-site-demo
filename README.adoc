@@ -21,6 +21,6 @@ This site demo a few features of the documentation system:
 Then you can preview at http://localhost:4242/[]
 
 === Build Site
-  docker run -it --name adoc-site-builder --rm -v $(pwd):/workspace/_override -v $(pwd)/_site:/workspace/_site mrduguo/adoc-site-builder
+  docker run -it --name adoc-site-builder --rm -v $(pwd)/README.adoc:/workspace/README.adoc -v $(pwd):/workspace/_override -v $(pwd)/_site:/workspace/_site mrduguo/adoc-site-builder
 
 Then you can find the site been generated at `_site` folder.
