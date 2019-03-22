@@ -1,4 +1,4 @@
-= adoc-site-demo image:https://secure.travis-ci.org/mrduguo/adoc-site-demo.svg?branch=master["Build Status", link="https://travis-ci.org/mrduguo/adoc-site-demo"]
+= ADoc Site Demo image:https://secure.travis-ci.org/mrduguo/adoc-site-demo.svg?branch=master["Build Status", link="https://travis-ci.org/mrduguo/adoc-site-demo"]
 
 A sample document site using https://hub.docker.com/r/mrduguo/adoc-site-builder docker image.
 
