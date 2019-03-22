@@ -1,3 +1,10 @@
 :page-layout: homepage
 
+= ADoc Site Demo
+
 include::README.adoc[]
+
+
+== Source Code
+
+The site was generated from https://github.com/mrduguo/adoc-site-demo . Feel free to take a look how it works with reliable docker based documentation generation.
