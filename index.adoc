@@ -5,12 +5,16 @@
 == Features
 This site demo a few feature of the documentation system:
 
-* https://mrduguo.github.io/adoc-site-demo/[Breadcrumb based navigation]
-* https://mrduguo.github.io/adoc-site-demo/[Search box]
-* https://mrduguo.github.io/adoc-site-demo/kb/[Site map]
-* https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/secure-network/#network-topology[Diagrams support]
-* https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/reference-architecture/[Table of content]
-*  https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/reference-architecture/#realtime-processing[Files support]
+
+* https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/reference-architecture/[demo page 1]
+** breadcrumb based navigation
+** search box
+** table of content
+** git repo links integration
+** files support
+* https://mrduguo.github.io/adoc-site-demo/kb/[demo page 2]: site map
+* https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/secure-network/#network-topology[demo page 3]: diagrams support
+
 
 
 == Source Code
