@@ -5,6 +5,6 @@
 include::README.adoc[]
 
 
-== Source Code
+=== Source Code
 
 The site was generated from https://github.com/mrduguo/adoc-site-demo . Feel free to take a look how it works with reliable docker based documentation generation.

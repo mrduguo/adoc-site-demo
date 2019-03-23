@@ -3,7 +3,7 @@
 A sample document site using https://hub.docker.com/r/mrduguo/adoc-site-builder docker image.
 
 
-== Features
+=== Features
 This site demo a few features of the documentation system:
 
 * https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/reference-architecture/[demo page 1]
@@ -15,7 +15,7 @@ This site demo a few features of the documentation system:
 * https://mrduguo.github.io/adoc-site-demo/kb/[demo page 2]: site map
 * https://mrduguo.github.io/adoc-site-demo/kb/engineering/architecture/secure-network/#network-topology[demo page 3]: diagrams support
 
-== Preview Site Locally
+=== Preview Site Locally
   docker run -it --name adoc-site-builder --rm -v $(pwd):/workspace/_override -p 4242:4242 mrduguo/adoc-site-builder bundle exec rake preview
 
 Then you can preview at http://localhost:4242/[]
