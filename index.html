@@ -4,11 +4,8 @@
 <div class="paragraph">
 <p>A sample document site using <a href="https://hub.docker.com/r/mrduguo/adoc-site-builder" class="bare">https://hub.docker.com/r/mrduguo/adoc-site-builder</a> docker image.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="features"><a class="anchor" href="#features"></a>Features</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="features"><a class="anchor" href="#features"></a>Features</h3>
 <div class="paragraph">
 <p>This site demo a few features of the documentation system:</p>
 </div>
@@ -45,10 +42,8 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="preview-site-locally"><a class="anchor" href="#preview-site-locally"></a>Preview Site Locally</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="preview-site-locally"><a class="anchor" href="#preview-site-locally"></a>Preview Site Locally</h3>
 <div class="literalblock">
 <div class="content">
 <pre class="nowrap">docker run -it --name adoc-site-builder --rm -v $(pwd):/workspace/_override -p 4242:4242 mrduguo/adoc-site-builder bundle exec rake preview</pre>
@@ -56,6 +51,7 @@
 </div>
 <div class="paragraph">
 <p>Then you can preview at <a href="http://localhost:4242/" class="bare">http://localhost:4242/</a></p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="build-site"><a class="anchor" href="#build-site"></a>Build Site</h3>
@@ -68,13 +64,11 @@
 <p>Then you can find the site been generated at <code>_site</code> folder.</p>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="source-code"><a class="anchor" href="#source-code"></a>Source Code</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="source-code"><a class="anchor" href="#source-code"></a>Source Code</h3>
 <div class="paragraph">
 <p>The site was generated from <a href="https://github.com/mrduguo/adoc-site-demo" class="bare">https://github.com/mrduguo/adoc-site-demo</a> . Feel free to take a look how it works with reliable docker based documentation generation.</p>
+</div>
 </div>
 </div>
 </div></div></div><div class="large-4 columns secondary" id="sidebar"><h3><a class="anchor" href="#knowledge-base"></a>Knowledge Base</h3><ul><li><a href='/adoc-site-demo/kb/engineering/'>Engineering</a><ul><li><a href='/adoc-site-demo/kb/engineering/architecture/'>Architecture</a><ul><li><a href='/adoc-site-demo/kb/engineering/architecture/reference-architecture/'>Reference Architecture&#58; Event Processing</a><ul></ul></li><li><a href='/adoc-site-demo/kb/engineering/architecture/resource-naming/'>Resource Naming</a><ul></ul></li><li><a href='/adoc-site-demo/kb/engineering/architecture/secure-network/'>Secure Network</a><ul></ul></li><li><a href='/adoc-site-demo/kb/engineering/architecture/automation-levels/'>Automation Levels</a><ul></ul></li></ul></li></ul></li></ul></div></div></div><script>document.write('<script src=' + ('__proto__' in {} ? '/adoc-site-demo/javascripts/vendor/zepto' : '/adoc-site-demo/javascripts/vendor/jquery') + '.js><\/script>')</script><script>$('.toggle-navigation').click(function() { $('.navigation').toggle(); $('.content').toggleClass('large-8'); $('.content').toggleClass('large-12'); $('.toolbar').toggleClass('off'); });</script><script src="/adoc-site-demo/javascripts/foundation/foundation.js"></script><script src="/adoc-site-demo/javascripts/foundation/foundation.topbar.js"></script><script>$(document).foundation();</script></body></html>
